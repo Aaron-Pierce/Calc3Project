@@ -41,14 +41,14 @@
 
     This animation provides two interesting insights.
     Firstly, it is interesting to see how beginning with a base of the parameterization of a circle, and slightly perturbing it will produce such beautiful patterns.
-    It is iluminating to watch the individual columns as they draw their curves, because the x position of the drawing point of each curve is constant along the column, so you can see very clearly the effects of the change in the functions period, as it goes slower the further down the column you move
+    It is illuminating to watch the individual columns as they draw their curves, because the x position of the drawing point of each curve is constant along the column, so you can see very clearly the effects of the change in the functions period, as it goes slower the further down the column you move
 
     The second insight lies in understanding polar coordinates, surprisingly.
     Some polar curves, when graphed over the interval $[0, 2\pi)$ will repeat themselves, drawing the curve multiple times.
     This can be seen and understood in this table, as the 'velocity' of each curve in the animation shows very clearly that
     one curve could complete multiple cycles while another is still drawing its first.
     This gives an interesting perspective on polar coordinates, imagining them as having some velocity with which they graph,
-    and acknowleding that curves with a faster 'velocity', or smaller period, should be suspicious for repeating themselves, as they will 'finish' faster than others.
+    and acknowledging that curves with a faster 'velocity', or smaller period, should be suspicious for repeating themselves, as they will 'finish' faster than others.
 
     \section{Vector Fields, Divergence, Curl, and Approximating Partial Derivatives With a Computer}
     \underline{\href{https://saxten2011.github.io/VectorField/}{View the animation here}} (should this link not work I will provide the URLs as a comment with my submission)
@@ -63,9 +63,16 @@
     Firstly, the top and the bottom of the graphed region are regions with a high velocity of flow, which contrast themselves with the slower center.
     The middle region very clearly has a point with highly positive curl, as you can see the particles swirling around it like a whirlpool.
 
-    Seeing this whirlpool was the main intention of the animation, giving a strong visual intuition of what curl actually looks like.
-    We can see from the vectors around the point with high curl, that a point with strong curl should look roughly like the following figure.
+    \begin{figure}[!h]
+        \centering
+        \includegraphics{whirlpoolish}
+        \caption{A rough whirlpool arrangement of vectors, though a bit rotated, the idea can be seen}
+    \end{figure}
 
+    Seeing this whirlpool was the main intention of the animation, giving a strong visual intuition of what curl actually looks like.
+    We can see from the vectors around the point with high curl, that a point with strong curl should look roughly like the figure above.
+    All of the vectors are pointing to the next, so that a particle that travels along them will follow the whirlpool.
+    The above figure is a little tilted, though, the following is a more ideal arrangement of such a whirlpool:
 
     \begin{figure}[!h]
         \centering
@@ -76,31 +83,32 @@
             \draw[black, thick, ->] (0.1, 0) -- (0.9, 0);
             \filldraw [black] (0.5, 0.5) circle (2pt);
         \end{tikzpicture}
+        \caption{A point on the vector field shown with its neighboring vectors. We would say that the curl at the point is high because of the whirlpool arrangement of vectors around it}
     \end{figure}
 
     This is very close to what is seen in the animation.
     The animation's vectors are rotated a bit, so this square would look like it had been rotated about 30 degrees, but the idea holds.
 
     This figure gives us the ideal circumstances for curl, and from it we can derive the formula for two dimensional curl.
-    Because curl will occur when vectors around a point look like the figure, describing what properties this figure has will give us a definition for curl.
+    Because curl will occur when vectors around a point look like the figure, describing what properties this figure has will give us an intuitive definition for curl in two dimensions.
 
     Firstly, we see that moving from left to right across the point moves from a negatively pointing vector to a positively pointing vector.
-    These vectors point in the y direction, so we can encode this information by taking a partial derivative of the $y$ component of the vector field by $x$, which when notated looks like
+    These vectors point in the y direction, so we can represent this information by taking a partial derivative of the $y$ component of the vector field by $x$, which when notated looks like
     $\frac{\partial Q}{\partial x}$
     In other words, how the y component of the vector changes as you move along the $x$ direction.
 
     Similarly, we see that moving from the bottom to the top of the point takes a positive vector to a negative vector, thus we look for 
     $\frac{\partial P}{ \partial y}$, and hope that it is negative.
     
-    To encode this information, we can add the two partial derivatives.
-    Because we \emph{want} $\frac{\partial P}{ \partial y}$ to be negative, we can subtract it instead of adding it, so that a positive value will mean higher curl.
+    To represent this information, we can subtract the two partial derivatives, 
+    because we \emph{want} $\frac{\partial P}{ \partial y}$ to be negative. When we subtract this negative number, the overall result will be a higher number, and will correspond to more curl, which is exactly what we want.
 
-    Therefore we arrive at the formula for 2 dimensional curl.
+    Therefore we arrive at the formula for two dimensional curl.
     \begin{gather*}
         \text{curl}_\text{2D} =  \frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}
     \end{gather*}
 
-    This makes intuitive sense, as if $\frac{\partial Q}{\partial x}$ is the same as $\frac{\partial P}{\partial y}$, the vectors around the point will look like the following figure.
+    This makes intuitive sense, as if $\frac{\partial Q}{\partial x} = \frac{\partial P}{\partial y}$, the vectors around the point will look like the following figure.
 
     \begin{figure}[!h]
         \centering
@@ -117,7 +125,8 @@
     The figure shows this to be correct, as the flow along this point will push it towards the corners, not in a whirlpool, thus we want this situation to be given zero curl, which is consistent with our formula.
 
     Furthermore, if we take a point with positive curl, and flip all of the vectors around, then our value of curl will be negative.
-    This means that the left side moves faster than the right, and the top faster than the bottom, and thus we get clockwise rotation, which is precisely what we want to describe with a negative value of curl.
+    This means that the left side moves faster than the right, and the top faster than the bottom, and thus we get clockwise rotation, which is precisely what we want to describe with a negative value of curl,
+    so our definition seems like it covers all 3 cases.
 
     \subsection*{Understanding Green's Theorem}
     Finally, this picture of curl has a surprising result of making Green's theorem very clear.
@@ -166,7 +175,7 @@
     \end{figure}
     The vectors highlighted in red show how the computation of curl at each point is expecting those vectors, and they oppose.
     When you add the curl of those two points up, you can imagine that expectation canceling those two vectors out.
-    And if you cancel those vectors out, you are left with the following figure
+    And if you cancel those vectors out, you are left with the following figure.
     \begin{figure}[!h]
         \centering
         \begin{tikzpicture}
@@ -184,9 +193,11 @@
     Note that all that is left are the outside vectors, which make up the boundary of the domain.
     Now imagine that you tile many of these squares together all at once.
     All of the internal vectors will cancel, and you will be left with only the exterior vectors.
-    A line integral over the boundary of that domain will add up those remaining outer vectors, and calculate a 'curl' of sorts
-    for the boundary of that domain, which we can see is equivalent to adding up the curl of each point inside the domain,
-    which is exactly the statement of Green's theorem.
+    If you were to take a line integral over the boundary of that domain it would hit all of those exterior vectors, which are exactly the vectors we are left with after adding up the curl of all of the points.
+    We can see that line integral is equivalent to adding up the curl of each point inside the domain,
+    as only the outer vectors remain after adding up all of the internal curls.
+    The line integral will calculate a curl of its own, of sorts, as it calculates how the flow is 'curling' around the curve, and the double integral of curl over the domain is making the same computation by adding up all of the curls of every point, and canceling the ones that aren't on the boundary.
+    This is exactly the statement of Green's theorem, that the double integral of curl over a domain is the same as the line integral of the boundary of that domain.
 
     This intuition is helpful for understanding what happens when the domains are not simply connected as well.
     It becomes clear that if you remove a segment of your domain, some of those internal vectors that are canceled by adding up every point in the domain should not be canceled if they border the region that has been removed from the domain.
@@ -236,5 +247,24 @@
     \begin{gather*}
         -1.5\sin(-1.5) - \cos(1.5) + 1.5\sin(1.5) 
     \end{gather*}
-    Which comes out to $2.921748$, quite close to the computer's approximation of $3$,
+    Which comes out to $2.921748$, quite close to the computer's approximation of $3$.
+
+    \section{Conclusion}
+    We have seen herein two animations with some surprising insights.
+    The first was an animation of parametric coordinates that helped us think of the concept of the 'velocity' of a graph being drawn,
+    and how thinking of polar curves having a 'velocity' to them can help us understand when they might draw over themselves multiple times.
+
+    Secondly, we saw an animation of a vector field, that upon observation showed that when a point has high curl, the vectors around that point look like a whirlpool.
+    Having observed this, we could derive the formula for two dimensional curl, and use that same picture to understand Green's theorem by canceling the internal vectors
+    when you tile many 'whirlpool' points together.
+
+    Combining these, the power of physical or geometric intuition is understood, as many mathematical concepts revealed themselves to be
+    very clear when you have the right picture to view.
+    While none of these intuitions are proofs of Green's theorem or the definition of curl,
+    they do help a user of math better understand the ideas behind what motivates it,
+    which can be immediately useful for remembering and extending beyond just what is written in a textbook.
+
+    \section{Works Used}
+    The section on Understanding Green's Theorem was heavily inspired by \href{https://www.khanacademy.org/math/multivariable-calculus/greens-theorem-and-stokes-theorem/greens-theorem-articles/a/greens-theorem}{this KhanAcademy article}
+    on Green's theorem, which is where I first read about the whirlpool arrangement of vectors.
 \end{document}

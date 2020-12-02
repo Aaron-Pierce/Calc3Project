@@ -221,6 +221,9 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /home/aaron/Projects/Calc3ProjectDocument/whirlpoolish.png
+INPUT /home/aaron/Projects/Calc3ProjectDocument/whirlpoolish.png
+INPUT /home/aaron/Projects/Calc3ProjectDocument/whirlpoolish.png
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm

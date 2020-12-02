@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1605812165 "/home/aaron/Projects/Calc3ProjectDocument/project.tex" "/home/aaron/Projects/Calc3ProjectDocument/project.pdf" "project" 1605812165
-  "/home/aaron/Projects/Calc3ProjectDocument/project.aux" 1605812165 983 9d79e6fcb88d07d79800efe073bcdebe ""
-  "/home/aaron/Projects/Calc3ProjectDocument/project.tex" 1605812164 15278 2c6a0477f362565597375e277ad09b3c ""
+["pdflatex"] 1605968183 "/home/aaron/Projects/Calc3ProjectDocument/project.tex" "/home/aaron/Projects/Calc3ProjectDocument/project.pdf" "project" 1605968184
+  "/home/aaron/Projects/Calc3ProjectDocument/project.aux" 1605968184 1672 45024ec1e34a98510d8dc47ad2d07bc5 ""
+  "/home/aaron/Projects/Calc3ProjectDocument/project.tex" 1605968183 18201 9b9565a615aa84cf5fab2cb382d16224 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1591545468 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1591545468 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1591545468 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -155,13 +155,14 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1602459143 4727905 1b81189106e2406a827797a37162c1c0 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1602459117 2514048 cff7ae275c272efab274394147908861 ""
   "2020-11-19_12-25.png" 1605810315 39802 f84224199cb0d4c86e5c90ddd8d32355 ""
-  "project.aux" 1605812165 983 9d79e6fcb88d07d79800efe073bcdebe "pdflatex"
-  "project.out" 1605812165 197 9905d8b33a54167ca0409b21769e76b6 "pdflatex"
-  "project.tex" 1605812164 15278 2c6a0477f362565597375e277ad09b3c ""
+  "project.aux" 1605968184 1672 45024ec1e34a98510d8dc47ad2d07bc5 "pdflatex"
+  "project.out" 1605968184 287 ec257697b0e6ca51fc53f12984f259ed "pdflatex"
+  "project.tex" 1605968183 18201 9b9565a615aa84cf5fab2cb382d16224 ""
+  "whirlpoolish.png" 1605966652 2548 46079f155b8f5be89e9c9b004267a5f0 ""
   (generated)
   "project.out"
-  "/home/aaron/Projects/Calc3ProjectDocument/project.pdf"
-  "project.pdf"
-  "project.log"
   "/home/aaron/Projects/Calc3ProjectDocument/project.log"
+  "/home/aaron/Projects/Calc3ProjectDocument/project.pdf"
+  "project.log"
   "project.aux"
+  "project.pdf"
